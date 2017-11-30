@@ -1,0 +1,123 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8.11.2017, 18:44:44
+    Author     : Artush
+*/
+
+
+@media (max-width: 768px) { 
+    .menu {
+        height: auto !important;
+    }
+}
+
+
+
+html, body {
+    height: 100%;
+}
+
+
+body{
+    background: #ccc;
+    color: black;
+    font-family: Tahoma, Helvetica, sans-serif;
+}
+
+.maxWidth {
+    max-width:1170px;
+
+}
+.maxHeight  {
+    height: 100%;
+}
+
+
+div.header{
+    background: #ccc;
+    min-height: 80px;
+}
+div.footer{
+    background: #ccc;
+    min-height: 150px;
+}
+
+
+div.content{
+    background: #cccccc;
+    padding-bottom: 5px;
+    height: 100%;
+}
+
+.my-h1{
+    font-size: 36px;
+}
+
+.menu{
+    padding: 0px !important;
+    background: #999999;
+    height: 100%;
+}
+
+.text-right{
+    text-align: right;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px ;
+}
+.menu li a{
+    display: block;
+    padding: 8px 16px;
+    background: #999999;
+    color: #313131;
+}
+.menu li a:hover {
+    text-decoration: none;
+    background: #313131;
+    color: white;
+}
+
+.btnmargin{
+    margin: 10px 0 10px 0;
+} 
+
+.mm-content-container{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.mm-content-container .mm-content{
+    position:fixed;
+    padding:0;
+    margin:0;
+    margin-top: 25px;
+    text-align: center;
+
+    left:0;
+
+    width: 100%;
+
+    background: #08C;
+    color: #000;
+    z-index: 999;
+}
+
+.mm-content-container .mm-content::before {
+    content: "";
+    position:fixed;
+    padding:0;
+    margin:0;
+    left:0;
+ margin-top: -5px;
+    z-index: 999;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}

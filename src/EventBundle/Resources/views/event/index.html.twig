@@ -1,0 +1,61 @@
+{% extends "EventBundle::layout.html.twig" %}
+{% block header %}  <div class="my-h1"> Events list</div> {% endblock %}
+
+
+
+{% block body %}
+    <script>
+        var divList = [];
+    </script>
+    {% set i = 0%}
+    <div class="container-fluid ">
+        {% for event in events %}
+            {% if i is divisible by(3) %}
+                {% if i is not sameas(0)%}
+                </div>
+            {%endif%}
+            <div class="row">
+            {% endif %}
+            <div class="col-sm-4 event-block" id="id-{{event.id}}">
+
+                <div class="event">
+                    <div class="event-name"><a href="{{ path('event_show', { 'id': event.id }) }}">{{ event.name }}</a></div> 
+                    <div class="event-time">{% if event.time %}{{ event.time|date('d.m.Y H:i')  }} - {% endif %}  {{ event.location }}</div>
+                    <div class="event-detail">{{ event.details }} </div>
+                    <div class="event-links">  <a href="{{ path('event_edit', { 'id': event.id }) }}"  class="btn btn-default btnmargin" >edit</a></div>
+                </div>
+
+
+            </div>
+
+            <script>
+                divList.push('id-{{event.id}}');
+            </script>
+
+            {% if loop.last %} 
+            </div>
+        {% endif %}
+
+
+        {%   set i = i+1%}
+    {% endfor %}
+    <script>
+
+        $(document).ready(function () {
+           
+            var max = 0;
+            divList.forEach(function (divID) {
+                if ($('#' + divID).height() > max) {
+                    max = $('#' + divID).height();
+                }
+            });
+            $(".event").css("min-height", max);
+            calculateContent();
+
+        });
+    </script>
+</div>
+
+
+
+{% endblock %}

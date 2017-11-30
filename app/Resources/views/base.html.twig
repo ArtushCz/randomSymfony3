@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>{%- if block('title')-%}
+            {{ block ('title') }} | Eshop.cz
+            {%- else -%}
+            Best shop | eshop.cz
+            {%- endif -%}
+
+        </title>
+        {% block stylesheets %}
+            {% stylesheets
+                        'global/css/main.css'
+                        'bundles/event/events.css'
+                        filter='cssrewrite'
+            %}
+            <link rel="stylesheet" href="{{asset_url}}" />
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            {% endstylesheets %}
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script src="/global/js/global.js"></script>
+
+
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+
+    </head>
+    <body>
+        <div class="container-fluid maxWidth maxHeight">
+
+            <div class="row top-menu-height"> 
+            </div>
+            <div class="row">  
+
+                <div class="col-sm-12 menu text-right" >
+                {% embed  'mobile-menu.html.twig' %}{% endembed %}
+
+            </div>
+
+
+        </div>
+
+        <div class="row" id="id_row_content">  
+        {% embed  'menu.html.twig' %}{% endembed %}
+        <div class=" col-sm-9 content" id="id-content">
+        {% block body %}{% endblock %}
+    </div>
+</div>
+<div class="row test">  
+    <div class=" col-sm-12 footer text-center " id="id-footer">
+        Made by Imbecile  in 2018!
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        calculateContent();
+    });
+</script>
+</div>
+
+</div>
+{% block javascripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,98 @@
+<div  class="" id="id-mobile-menu">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="id-mm-top-bar">
+        <div class="container-fluid">
+            <div class="navbar-header"  id="id-navbar-header">
+                <a class="navbar-brand" href="#">WebSiteName</a>
+                <ul class="nav navbar-nav ">
+                    <li >
+                        <a href="#menu" style="background-color: transparent;float:right; "
+                           onclick="showMobileMenu();" class="text-right"><img src="/global/icons/btn_topnav.png" id="id-mm"></a>
+                        <a href="#menu" style="background-color: transparent;float:right; "
+                           onclick="" class="text-right"><img src="/global/icons/user_icon.png" id="id-mm-usr"></a>
+                    </li>
+                </ul>
+                <div id="id-mm-content" class="mm-content-container">
+                    <div class="mm-content-background">
+                    </div>
+                    <div class="mm-content" >
+                        <div class="mm-content-arrow">
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#"  onclick="menuClassToggle(this)">Menu</a>
+                                <ul id="test"  class="submenu">
+                                    <li>
+                                        <a href="{{ path('event_new') }}">New Event!</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('event_index') }}">Test1</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('event_index') }}">Test2</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('event_index') }}">Test3</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('event_index') }}">Test4</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" onclick="menuClassToggle(this)">Menu</a>
+                                <ul id="test"  class="submenu">
+                                    <li>
+                                        <a href="{{ path('event_new') }}">New Event!</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('event_index') }}">Test1</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('event_index') }}">Test2</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('event_index') }}">Test3</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('event_index') }}">Test4</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="{{ path('event_index') }}">Back to the list</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</div>
+
+<script>
+    function  menuClassToggle(aLink) {
+        $('a').removeClass('active');
+        $(aLink).toggleClass('active')
+    }
+    $(".submenu").hide();
+    $('a').click(function () {
+        if ($('a', this).hasClass('active')) {
+            $('a', this).removeClass('active');
+        } else {
+            $('a', this).addClass('active');
+        }
+    })
+    $("li:has(ul)").click(function () {
+        $(".submenu").slideUp('slow');
+        if ($("ul", this).is(':visible')) {
+            $('a', this).removeClass('active');
+        } else {
+            $("ul", this).slideDown('slow');
+
+        }
+
+    });
+</script>

@@ -1,0 +1,34 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8.11.2017, 19:47:07
+    Author     : Artush
+*/
+
+.event{
+    width: 300px;
+   float: left;
+   display: box;
+    background: #222222;
+    color: white;
+    padding: 10px;
+}
+.event a{
+    color:#ff6600;
+}
+
+.event-name{
+    font-size: 20px;
+}
+
+.event-links{
+    text-align: right;
+}
+
+.event-time{
+    font-size: 11px;
+    font-style: italic;
+}

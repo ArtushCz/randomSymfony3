@@ -1,0 +1,19 @@
+{% extends "EventBundle::layout.html.twig" %}
+
+{% block title %}{{ event.name }} {% endblock %} 
+ {% block header %}   <div class="my-h1"> Event - {{ event.name}}</div>  {% endblock %}
+{% block body %}  
+
+
+
+    <div class="event">
+        <div class="event-name"><a href="{{ path('event_show', { 'id': event.id }) }}">{{ event.name }}</a></div> 
+        <div class="event-time">{% if event.time %}{{ event.time|date('d.m.Y H:i') }} - {% endif %}  {{ event.location }}</div>
+        <div class="event-detail">{{ event.details }} </div>
+        <div class="event-links">  <a href="{{ path('event_edit', { 'id': event.id }) }}"  class="btn btn-default btnmargin" >edit</a>
+            {{ form_start(delete_form) }}
+            <input type="submit"  class="btn btn-default btnmargin"  value="Delete">
+            {{ form_end(delete_form) }}</div>
+    </div>
+
+{% endblock %}

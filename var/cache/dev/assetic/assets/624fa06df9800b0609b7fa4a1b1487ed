@@ -1,0 +1,99 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8.11.2017, 18:44:44
+    Author     : Artush
+*/
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+* {
+    box-sizing: border-box;
+}
+
+[class*="col-"] {
+    float: left;
+}
+
+@media only screen and (max-width: 768px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+body{
+    background: #ccc;
+    color: black;
+    font-family: Tahoma, Helvetica, sans-serif;
+}
+
+.row::after{
+    margin: 0px;
+    content: "";
+    clear: both;
+    display: block;
+
+}
+
+div.header{
+    padding: 15px;
+    height:100px;
+}
+
+div.content{
+    background: #cccccc;
+    padding: 15px;
+    float: left;
+}
+
+/*h1*/
+div.head{
+    font-size: 36px;
+    padding: 10px;
+    color: #ff6600;
+}
+
+html a{
+    color: #000000;
+    text-decoration: none;
+}
+
+html a:hover{
+    color:#111111;
+    text-decoration: underline;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    display: block;
+    padding: 8px 16px;
+    background: #999999;
+    color: #313131;
+}
+.menu li:hover {
+    text-decoration: none;
+    background: #313131;
+    color: white;
+}
+
+.btnmargin{
+    margin: 10px 0 10px 0;
+} 

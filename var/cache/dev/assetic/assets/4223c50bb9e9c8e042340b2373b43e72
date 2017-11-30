@@ -1,0 +1,75 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8.11.2017, 18:44:44
+    Author     : Artush
+*/
+
+@media (min-width: 768px) { 
+    .menu {
+        height: auto;
+    }
+}
+
+html, body {
+    height: 100%;
+}
+
+
+body{
+    background: #ccc;
+    color: black;
+    font-family: Tahoma, Helvetica, sans-serif;
+}
+
+.maxWidth {
+    max-width:1170px;
+
+}
+.maxHeight  {
+    height: 100%; 
+}
+
+div.header{
+    background: #ccc;
+    min-height: 80px;
+}
+
+div.content{
+    background: #cccccc;
+    padding-bottom: 5px;
+    height: 100%;
+}
+
+.my-h1{
+    font-size: 36px;
+}
+
+.menu{
+    padding: 0px !important;
+    background: #999999;
+    height: 100%;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px ;
+}
+.menu li a{
+    display: block;
+    padding: 8px 16px;
+    background: #999999;
+    color: #313131;
+}
+.menu li a:hover {
+    text-decoration: none;
+    background: #313131;
+    color: white;
+}
+
+.btnmargin{
+    margin: 10px 0 10px 0;
+} 
